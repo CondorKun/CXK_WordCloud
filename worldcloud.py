@@ -6,7 +6,7 @@ import requests
 from scipy.misc import imread
 from wordcloud import WordCloud
 
-def fetch_sina_news():
+def fetch_bilibili():
     PATTERN = re.compile('<d p=".*?">(.*?)<\/d>')
     BASE_URL = 'http://comment.bilibili.com/83089367.xml'
     with open('31621681.xml', 'w', encoding='utf-8') as f:
@@ -49,5 +49,5 @@ def extract_words():
     plt.show()
     
 if __name__ == "__main__":
-    fetch_sina_news()
+    fetch_bilibili()
     extract_words()
